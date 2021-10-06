@@ -1,16 +1,13 @@
-function findLongestWord(str) {
-  
-    var strSplit = str.split(' ');
-      
-    var longestWord = 0;
-  
-    for(var i = 0; i < strSplit.length; i++){
-      if(strSplit[i].length > longestWord){
-      longestWord = strSplit[i].length; 
-       }
+const words = ['Haleigh', 'stayed', 'up', 'too', 'late']
+
+const findLongestWord = (strArr) => {
+  let longest = strArr[0]
+  for(let i = 0; i < strArr.length; i++){
+    if(strArr[i].length > longest.length){
+      longest = strArr[i]
     }
-  
-    return longestWord; 
   }
-  
-  findLongestWord("Haleigh did not like this weeks assessment");
+
+  return longest.length
+}
+console.log(findLongestWord(words))
